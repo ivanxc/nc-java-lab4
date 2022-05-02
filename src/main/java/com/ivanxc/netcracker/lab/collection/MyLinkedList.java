@@ -81,10 +81,10 @@ public class MyLinkedList<E> implements ILinkedList<E> {
 
         E removedValue;
 
-        if (index == 0) {
-            removedValue = removeFirst();
-        } else if (index == size - 1) {
+        if (index == size - 1) {
             removedValue = removeLast();
+        } else if (index == 0) {
+            removedValue = removeFirst();
         } else {
             Node<E> beforeToRemove = getNodeByIndex(index - 1);
             Node<E> toRemove = beforeToRemove.next;
