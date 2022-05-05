@@ -140,31 +140,31 @@ public class CollectionBenchmarker {
     /**
      * Measure performance of main operations: addition, removing and search
      * for ArrayList, LinkedList and MyLinkedList.
-     * @param numberOfElemets the number of elements to use to measure performance.
+     * @param numberOfElements the number of elements to use to measure performance.
      * @return List of {@link PerformanceDetails} for all operations performed on passed number of elements.
      */
-    public static List<PerformanceDetails> measureLists(int... numberOfElemets) {
-        return measureCollections(listClasses, numberOfElemets);
+    public static List<PerformanceDetails> measureLists(int... numberOfElements) {
+        return measureCollections(listClasses, numberOfElements);
     }
 
     /**
      * Measure performance of main operations: addition, removing and search
      * for HashSet, LinkedHashSet and TreeSet.
-     * @param numberOfElemets the number of elements to use to measure performance.
+     * @param numberOfElements the number of elements to use to measure performance.
      * @return List of {@link PerformanceDetails} for all operations performed on passed number of elements.
      */
-    public static List<PerformanceDetails> measureSets(int... numberOfElemets) {
-        return measureCollections(setClasses, numberOfElemets);
+    public static List<PerformanceDetails> measureSets(int... numberOfElements) {
+        return measureCollections(setClasses, numberOfElements);
     }
 
     /**
      * Measure performance of main operations: addition, removing and search
      * for HashMap, LinkedHashMap and TreeMap.
-     * @param numberOfElemets the number of elements to use to measure performance.
+     * @param numberOfElements the number of elements to use to measure performance.
      * @return List of {@link PerformanceDetails} for all operations performed on passed number of elements.
      */
-    public static List<PerformanceDetails> measureMaps(int... numberOfElemets) {
-        return measureCollections(mapClasses, numberOfElemets);
+    public static List<PerformanceDetails> measureMaps(int... numberOfElements) {
+        return measureCollections(mapClasses, numberOfElements);
     }
 
     /**
@@ -173,16 +173,16 @@ public class CollectionBenchmarker {
      * @param classes class representing collections: ArrayList, LinkedList, MyLinkedList,
      *                                                HashSet, LinkedHashSet, TreeSet,
      *                                                HashMap, LinkedHashMap, TreeMap.
-     * @param numberOfElemets the number of elements to use to measure performance.
+     * @param numberOfElements the number of elements to use to measure performance.
      * @return List of {@link PerformanceDetails} for main operations (addition, removing, search) 
      * performed on passed number of elements by each passed collection.
      */
-    private static List<PerformanceDetails> measureCollections(Class[] classes , int... numberOfElemets) {
+    private static List<PerformanceDetails> measureCollections(Class[] classes , int... numberOfElements) {
         List<PerformanceDetails> result = new ArrayList<>();
         EnumSet<Operation> allOperations = EnumSet.allOf(Operation.class);
 
         for(Class<?> clazz : classes) {
-            for(int elements : numberOfElemets) {
+            for(int elements : numberOfElements) {
                 result.addAll(CollectionBenchmarker.measure(clazz, allOperations, elements));
             }
         }
