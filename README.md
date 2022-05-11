@@ -1,7 +1,7 @@
 # nc-java-lab4
 **Замечание: все измерения сделаны с помощью класса Instant с небольшим количеством прогонов (4), а значит, не являются абсолютно точными. Присутствует погрешность.**
 ### Сравнение LinkedList и MyLinkedList
-![Альтернативный текст](https://sun7-9.userapi.com/s/v1/if2/0mV2zcWwRPXIIZStiEjdCZ-jyqWEJ3I5C_e6U4MFcW_yFi5UM5GiRtUnEQcohkMaB9G4u_yfVpGwRN8KDni0Kw85.jpg?size=874x298&quality=96&type=album)
+![Результат измерения производительности LinkedList и MyLinkedList](https://sun7-9.userapi.com/s/v1/if2/0mV2zcWwRPXIIZStiEjdCZ-jyqWEJ3I5C_e6U4MFcW_yFi5UM5GiRtUnEQcohkMaB9G4u_yfVpGwRN8KDni0Kw85.jpg?size=874x298&quality=96&type=album)
 #### Вставка
 1. Вставка в начало
 +  Выполляется за o(1) в обоих случаях.
@@ -30,7 +30,7 @@
 
 
 ### Сравнение ArrayList и LinkedList
-![Альтернативный текст](https://sun7-13.userapi.com/s/v1/if2/p-5K4fACCWMGAVrsPzJluGHfCGcH79_4I0TjPtQST40YCdQS5T-qfJxOVrrqZgt0PqUJelT08R9qCutO5boNuQo8.jpg?size=874x415&quality=96&type=album)
+![Результат измерения производительности ArrayList и LinkedList](https://sun9-21.userapi.com/s/v1/if2/Sb8nAECFUCKNseS85w4vpwhuyQoVhXsa9qS5icrhPhs_IpNQ2XBemz3aJaGiQXSIAz7PVFpPMgyNJ31djUhDy15o.jpg?size=874x298&quality=96&type=album)
 #### Вставка + удаление
 1. Вставка в начало
 + Выполняется в **ArrayList** пропорционально количеству элементов.
@@ -51,7 +51,7 @@
 если нужен список, где постоянно происходит вставка в начало, лучше использовать LinkedList, в остальных случаях - ArrayList.*
 
 ### Сравнение HashSet, LinkedHashSet, TreeSet
-![Альтернативный текст](https://sun9-59.userapi.com/s/v1/if2/M4XNdByVNt0HYO5LxVB8kEIGcKSnitjNx45mxe3XC35OnKBIx40oDRtQ39h3e3csq2VSqcFBwUqBfjH49GUCaecy.jpg?size=874x399&quality=96&type=album)
+![Результат измерения производительности HashSet, LinkedHashSet, TreeSet](https://sun9-59.userapi.com/s/v1/if2/M4XNdByVNt0HYO5LxVB8kEIGcKSnitjNx45mxe3XC35OnKBIx40oDRtQ39h3e3csq2VSqcFBwUqBfjH49GUCaecy.jpg?size=874x399&quality=96&type=album)
 1. Вставка, удаление, поиск
 + Выполяется в **HashSet** и **LinkedHashSet** за o(1).
 + Выполняетя в **TreeSet** пропорционально количеству элементов.
@@ -61,7 +61,7 @@
 Соответственно, если порядок элементов в множестве не важен - лучше использовать HashSet. Если требуется, чтобы элементы хранились в порядке вставки - LinkedHashSet. Если требуется, чтобы элементы множества были отсортированы - TreeSet.*
 
 ### Сравнение HashMap, LinkedHashMap, TreeMap
-![Альтернативный текст](https://sun9-33.userapi.com/s/v1/if2/gfi51IOHifqXO3OmV6eLALwnO9BrniCxno2oMvnuyfW74hA2taKdYzQgTJC9ieY1NRIQqWdNU_JFUrffM_JyhdaI.jpg?size=874x398&quality=96&type=album)
+![Результат измерения производительности  HashMap, LinkedHashMap, TreeMap](https://sun9-33.userapi.com/s/v1/if2/gfi51IOHifqXO3OmV6eLALwnO9BrniCxno2oMvnuyfW74hA2taKdYzQgTJC9ieY1NRIQqWdNU_JFUrffM_JyhdaI.jpg?size=874x398&quality=96&type=album)
 1. Вставка, удаление, поиск
 + Выполяется в **HashMap** и **LinkedHashMap** за o(1).
 + Выполняетя в **TreeMap** пропорционально количеству элементов.
